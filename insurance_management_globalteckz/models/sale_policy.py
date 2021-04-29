@@ -270,7 +270,7 @@ class policy_emi(models.Model):
         line_f = invoice_line.fields_get()
         default_line = invoice_line.default_get(line_f)
     
-        default_value.update({'journal_id': 'Customer Invoices',
+        default_value.update({'journal_id': 1,
                               'partner_id': self.sale_policy_id.policy_holder.id,
                               'currency_id': self.sale_policy_id.branch_name.currency_id.id,
                               'company_id': self.sale_policy_id.branch_name.id,
