@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_policy_registration_user,policy.registration.user,model_sale_policy,policy_user,1,1,0,1
+access_policy_emi_line_user,policy.emi.line,model_policy_emi_line,policy_user,1,1,0,1
+access_schemes_details,schemes.details,model_schemes_details,policy_user,1,1,0,1
+access_base_res_partner,policy.registration.delete,base.model_res_partner,policy_agent_user,1,1,1,0
+access_policy_details,policy.details,model_policy_details,policy_manager_user,1,1,1,1
+access_policy_agent_user,policy.registration.delete,model_sale_policy,policy_agent_user,1,1,1,1
+access_policy_emi_agent_user,policy.emi.line,model_policy_emi_line,policy_agent_user,1,1,1,1
+access_schemes_agent_user,schemes.details,model_schemes_details,policy_agent_user,1,1,1,1
+access_manager_user,all.access.rigths.allowd,base.model_res_partner,policy_manager_user,1,1,1,1
+access_manager_registration_user,policy.registration.user,model_sale_policy,policy_manager_user,1,1,1,1
+access_manager_emi_line_user,policy.emi.line,model_policy_emi_line,policy_manager_user,1,1,1,1
+access_manager_schemes_details,schemes.details,model_schemes_details,policy_manager_user,1,1,1,1
+access_manager_res_partner,policy.registration.delete,base.model_res_partner,policy_manager_user,1,1,1,1
+access_schemes_details_base,schemes.details,model_schemes_details,base.group_user,1,1,1,1
+access_policy_details_base,policy.details,model_policy_details,base.group_user,1,1,1,1
+access_sale_policy,sale.policy,model_sale_policy,base.group_user,1,1,1,1

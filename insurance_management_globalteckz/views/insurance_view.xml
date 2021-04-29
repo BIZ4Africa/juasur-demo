@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<menuitem id='menu_insurance' name='Insurance Management'/>
+	<menuitem id='menu_policy' name='Policy' parent='menu_insurance'/>
+	<menuitem id='menu_agent' name='Agent Details' parent='menu_insurance'/>
+	<menuitem id='menu_configuration' name='Configuration' parent='menu_insurance'/>
+</odoo>
