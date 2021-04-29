@@ -1,4 +1,4 @@
-     # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Globalteckz Pvt Ltd
@@ -275,8 +275,7 @@ class policy_emi(models.Model):
                               'company_id': self.sale_policy_id.branch_name.id,
                               'invoice_date': self.emi_start_date,
                               'invoice_payment_term_id': self.sale_policy_id.policy_term.id,
-                              'move_type':'out_invoice',
-                              'l10n_in_gst_treatment':'unregistered'
+                              'move_type':'out_invoice'
                               })
         invoice = invoice_obj.new(default_value)
         invoice._onchange_partner_id()
