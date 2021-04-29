@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<!--	<report id="policy_sale_reports" string="Policy Report"-->
+<!--		model="sale.policy" report_type="qweb-pdf"-->
+<!--		name="insurance_management_globalteckz.policy_sale_template_qweb"-->
+<!--		file="insurance_management_globalteckz.policy_sale_template" />-->
+
+	<record id="policy_sale_reports" model="ir.actions.report">
+            <field name="name">Policy Report</field>
+            <field name="model">sale.policy</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">insurance_management_globalteckz.policy_sale_template_qweb</field>
+            <field name="report_file">insurance_management_globalteckz.policy_sale_template</field>
+            <field name="binding_model_id" ref="model_sale_policy"/>
+            <field name="binding_type">report</field>
+        </record>
+</odoo>
