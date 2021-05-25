@@ -1,7 +1,15 @@
 from odoo import models, fields, api, _, exceptions
 
 class purchase_requisition(models.Model):
-    _inherit = ['purchase.requisition']
+    _inherit = ['crm.lead']
+
+    purchase_requisition_count = fields.Integer(string='purchase requisition', compute='_purchase_requisition_count', store=False)
+    purchase_requisition_ids = fields.One2many('purchase.requisition', 'requisition_id', string='purchase requisition IDs', copy=False)
+
+    def _purchase_requisition_count(self):
+        for subscription in self:
+            subscription.pms_sale_order_count = self.env['purchase.requisition'].search_count(
+                [()])
 
     def action_purchase_requisition(self):
         self.ensure_one()
