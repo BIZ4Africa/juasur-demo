@@ -18,7 +18,4 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import agent
-from . import res_company
-from . import policy
-from . import sale_policy
+from . import purchase

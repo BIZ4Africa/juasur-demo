@@ -1,6 +1,6 @@
 from odoo import models, fields, api, _, exceptions
 
-class convention(models.Model):
+class purchase_requisition(models.Model):
     _inherit = ['purchase.requisition']
 
     def action_purchase_requisition(self):
