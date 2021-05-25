@@ -4,7 +4,7 @@ class purchase_requisition(models.Model):
     _inherit = ['crm.lead']
 
     purchase_requisition_count = fields.Integer(string='purchase requisition', compute='_purchase_requisition_count', store=False)
-    purchase_requisition_ids = fields.One2many('purchase.requisition', 'requisition_id', string='purchase requisition IDs', copy=False)
+    purchase_requisition_ids = fields.One2many('purchase.requisition', 'lead_id', string='purchase requisition IDs', copy=False)
 
     def _purchase_requisition_count(self):
         for subscription in self:
