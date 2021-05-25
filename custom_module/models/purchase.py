@@ -7,8 +7,8 @@ class purchase_requisition(models.Model):
     # purchase_requisition_ids = fields.One2many('purchase.requisition', 'lead_id', string='purchase requisition IDs', copy=False)
 
     def _purchase_requisition_count(self):
-        for subscription in self:
-            subscription.pms_sale_order_count = self.env['purchase.requisition'].search_count([])
+        for lead in self:
+            lead.purchase_requisition_count = self.env['purchase.requisition'].search_count([])
 
     def action_purchase_requisition(self):
         self.ensure_one()
