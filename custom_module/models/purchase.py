@@ -8,12 +8,11 @@ class purchase_requisition(models.Model):
 
     def _purchase_requisition_count(self):
         for subscription in self:
-            subscription.pms_sale_order_count = self.env['purchase.requisition'].search_count(
-                [])
+            subscription.pms_sale_order_count = self.env['purchase.requisition'].search_count()
 
     def action_purchase_requisition(self):
         self.ensure_one()
-        purchase_requisition = self.env['purchase.requisition'].search([()])
+        # purchase_requisition = self.env['purchase.requisition'].search([()])
         return {
             "type": "ir.actions.act_window",
             "res_model": "purchase.requisition",
